@@ -38,7 +38,7 @@ const ExperienceSection = () => {
               <div className="w-2 h-2 bg-green-200 rounded-full shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div>
             </div>
             {/* Contenido de la tarjeta */}
-            <div className="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl border border-slate-800 bg-neutral-300/10 hover:border-blue-400/30 transition-all duration-200 shadow-xl">
+            <div className="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl border border-slate-800 bg-gray-100/10 hover:border-blue-400/30 transition-all duration-200 shadow-xl">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-1 gap-1">
                 <div className="font-bold text-slate-100 text-lg">
                   {exp.puesto}
