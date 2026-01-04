@@ -3,18 +3,19 @@ import { useApi } from "../../hooks/useApi";
 import { portfolioService } from "../../services/apiService";
 
 const EducationSection = () => {
-  const {
-    data: education,
-    loading,
-    request: fetchEdu,
-  } = useApi(portfolioService.getEducation);
+  const { data: education, request: fetchEdu } = useApi(
+    portfolioService.getEducation
+  );
 
   useEffect(() => {
     fetchEdu();
   }, [fetchEdu]);
 
   return (
-    <section id="education" className="py-20 px-6 max-w-4xl mx-auto border-b-1 border-b-gray-500/50">
+    <section
+      id="education"
+      className="py-20 px-6 max-w-4xl mx-auto border-b-1 border-b-gray-500/50"
+    >
       <h2 className="text-3xl font-bold mb-12 text-center w-fit mx-auto italic">
         Education
       </h2>

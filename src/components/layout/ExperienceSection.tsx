@@ -3,11 +3,9 @@ import { useApi } from "../../hooks/useApi";
 import { portfolioService } from "../../services/apiService";
 import type { Experience } from "../../types/api";
 const ExperienceSection = () => {
-  const {
-    data: experiences,
-    loading,
-    request: fetchExp,
-  } = useApi(portfolioService.getExperiences);
+  const { data: experiences, request: fetchExp } = useApi(
+    portfolioService.getExperiences
+  );
 
   useEffect(() => {
     fetchExp();
@@ -28,7 +26,7 @@ const ExperienceSection = () => {
       </h2>
 
       <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">
-        {experiences?.map((exp: Experience, index: number) => (
+        {experiences?.map((exp: Experience) => (
           <div
             key={exp.id}
             className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
