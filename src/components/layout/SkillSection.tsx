@@ -78,9 +78,10 @@ const SkillSection = () => {
                       <span className="text-sm font-bold text-slate-200 group-hover:text-white">
                         {skill.nombre}
                       </span>
-                      <span className="text-[10.5px] text-slate-500 uppercase tracking-tight">
+                      {/* Considero innecesario mostrar el nivel de las skills, en caso de querer hacerlo se descomenta la linea siguiente: */}
+                      {/* <span className="text-[10.5px] text-slate-500 uppercase tracking-tight">
                         {skill.nivel}
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 ))}
