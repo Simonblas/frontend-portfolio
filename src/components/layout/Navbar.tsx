@@ -82,7 +82,6 @@ export const Navbar = () => {
             Contact
           </button>
           {!isAuthenticated ? (
-            // Si NO está autenticado, mostrar el Login
             <Link
               to="/login"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -91,7 +90,6 @@ export const Navbar = () => {
               Login
             </Link>
           ) : (
-            // Si SÍ está autenticado, mostrar Admin y Logout
             <div className="flex items-center gap-4">
               <Link
                 to="/admin"
