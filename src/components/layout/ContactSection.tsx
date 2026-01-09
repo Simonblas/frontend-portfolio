@@ -20,7 +20,7 @@ const ContactSection = ({ email }: ContactProps) => {
   return (
     <section
       id="contact"
-      className="py-20 bg-transparent text-white text-center px-6"
+      className="py-20 bg-transparent text-white mx-auto text-center px-6"
     >
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold mb-2 text-center w-fit mx-auto italic">
@@ -65,7 +65,7 @@ const ContactSection = ({ email }: ContactProps) => {
               {" "}
               full-time remote opportunities{" "}
             </span>
-            and <span className="text-blue-300"> relocation.</span>.
+            and <span className="text-blue-300"> relocation</span>.
           </p>
           <p className="flex items-center justify-center gap-2">
             <img className="w-4" src={imgLocationWhite} alt="" />

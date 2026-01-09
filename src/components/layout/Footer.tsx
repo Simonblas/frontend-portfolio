@@ -23,7 +23,7 @@ const Footer = () => {
     <footer className="bg-transparent border-0 py-10 px-6 relative">
       <div className="max-w-5xl mx-auto flex flex-row justify-between items-center gap-2 md:gap-6">
         {/* Logo o Nombre - Alineación a la izquierda en mobile */}
-        <div className="flex flex-col items-start ">
+        <div className="flex flex-col items-start sm:justify-start sm:flex-1">
           <span className="text-sm md:text-xl font-light text-gray-400">
             Developed by{" "}
             {profile ? `${profile.nombre} ${profile.apellido}` : "Simon Blas"}
@@ -34,11 +34,11 @@ const Footer = () => {
         </div>
 
         {/* Copyright - Oculto en mobile para ahorrar espacio, visible en tablets/desktop */}
-        <div className="absolute bottom-20 left-1/3 text-gray-400 text-xs text-center sm:text-sm sm:static sm:bottom-auto sm:left-auto sm:block">
+        <div className="absolute bottom-20 left-1/3 text-gray-400 text-xs text-center sm:text-sm sm:static sm:bottom-auto sm:block sm:flex-1 sm:flex sm:justify-center">
           © {new Date().getFullYear()} - version 1.1.0
         </div>
 
-        <div className="flex gap-4 md:gap-6 text-sm font-medium">
+        <div className="flex gap-4 md:gap-6 text-sm font-medium sm:flex-1 sm:justify-end">
           {profile?.githubUrl && (
             <a
               href={profile.githubUrl}
