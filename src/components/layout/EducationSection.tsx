@@ -31,11 +31,10 @@ const EducationSection = () => {
         {education?.map((edu: Education) => (
           <div
             key={edu.id}
-            className="group p-4 md:p-6 bg-gray-100/10 border-l-4 border-blue-400 rounded-r-xl hover:bg-blue-200/5 transition-all duration-300 flex flex-row gap-4 md:gap-6 items-center"
+            className="group p-4 md:p-6 bg-gray-100/10 border-l-4 border-blue-400 rounded-r-xl hover:bg-blue-200/5 transition-all duration-300 flex flex-row gap-3 md:gap-6 items-center overflow-hidden"
           >
-            {/* Contenedor del Logo - Siempre a la izquierda y centrado verticalmente */}
             <div className="shrink-0">
-              <div className="w-14 h-14 md:w-20 md:h-20 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden p-1.5 md:p-2 group-hover:border-blue-400/50 transition-colors">
+              <div className="w-12 h-12 md:w-20 md:h-20 rounded-lg md:rounded-xl bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden p-1.5 md:p-2 group-hover:border-blue-400/50 transition-colors">
                 {edu.logoUrl ? (
                   <img
                     src={edu.logoUrl}
@@ -43,39 +42,35 @@ const EducationSection = () => {
                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                   />
                 ) : (
-                  <span className="text-blue-400 text-xl md:text-3xl font-black">
+                  <span className="text-blue-400 text-lg md:text-3xl font-black">
                     {edu.institucion.charAt(0)}
                   </span>
                 )}
               </div>
             </div>
 
-            {/* Contenido - A la derecha del logo */}
             <div className="flex-1 min-w-0">
               <div className="flex flex-col gap-1">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-1">
                   <div className="min-w-0">
-                    <h3 className="text-base md:text-xl font-bold text-slate-100 group-hover:text-blue-400 transition-colors leading-tight truncate md:whitespace-normal">
+                    <h3 className="text-sm md:text-xl font-bold text-slate-100 group-hover:text-blue-400 transition-colors leading-tight truncate md:whitespace-normal">
                       {edu.titulo}
                     </h3>
-                    <p className="text-sm md:text-lg text-slate-300 font-medium truncate md:whitespace-normal">
+                    <p className="text-xs md:text-lg text-slate-300 font-medium truncate md:whitespace-normal">
                       {edu.institucion}
                     </p>
                   </div>
 
-                  {/* Rango de Fechas */}
-                  <div className="shrink-0 mt-1 md:mt-0">
-                    <span className="inline-block text-slate-300 font-mono font-bold bg-blue-400/10 px-2 md:px-4 py-1 rounded-full text-[10px] md:text-xs whitespace-nowrap">
-                      {formatDate(edu.fechaInicio)} —→{" "}
-                      {formatDate(edu.fechaFin)}
+                  <div className="shrink-0 mt-0.5 md:mt-0">
+                    <span className="inline-block text-slate-400 font-mono font-bold bg-blue-400/10 px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[9px] md:text-xs whitespace-nowrap border border-blue-400/20">
+                      {formatDate(edu.fechaInicio)} — {formatDate(edu.fechaFin)}
                     </span>
                   </div>
                 </div>
               </div>
 
-              {/* Descripción - Se oculta en móviles muy pequeños para mantener el centrado del logo limpio */}
               {edu.descripcion && (
-                <p className="hidden sm:block text-slate-500 mt-3 text-xs md:text-sm leading-relaxed border-t border-white/5 pt-2 italic line-clamp-2 md:line-clamp-none">
+                <p className="hidden md:block text-slate-500 mt-3 text-sm leading-relaxed border-t border-white/5 pt-2 italic line-clamp-2 md:line-clamp-none">
                   {edu.descripcion}
                 </p>
               )}
