@@ -46,8 +46,9 @@ const Home = () => {
 
   if (loading)
     return (
-      <div className="flex h-screen items-center justify-center bg-transparent text-blue-600 font-bold">
-        Loading server...
+      <div className="flex h-screen items-center justify-center bg-transparent text-blue-300 font-bold">
+        Loading server... The backend may take a few seconds to start due to the
+        use of free infrastructure.
       </div>
     );
 
