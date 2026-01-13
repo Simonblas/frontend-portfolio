@@ -80,7 +80,7 @@ const HeroSection = ({ nombre, titulo, cvUrl }: HeroProps) => {
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="absolute bottom-10 md:bottom-16 left-1/2 -translate-x-1/2">
+        <div className="absolute bottom-16 md:bottom-16 left-1/2 -translate-x-1/2">
           <svg
             className="w-9 h-9 text-blue-400/60 animate-iteration-count-infinite animate-float"
             fill="none"
