@@ -145,20 +145,13 @@ El panel privado permite al administrador gestionar el contenido del portafolio 
 
 ## Manejo de Estados y Feedback
 
-| Estado | Descripción |
-|:-------|:------------|
-| **Loading** | Indicadores visuales durante la carga de datos de la API. |
-| **Error Handling** | Captura de excepciones de red y errores de validación (400, 401, 403, 404). |
-| **Persistence** | Sincronización inmediata de la UI tras operaciones de escritura exitosas. |
+La aplicación implementa un sistema de retroalimentación proactiva para asegurar una experiencia de usuario fluida y profesional:
+
+| Estado | Implementación y Descripción |
+|:-------|:-----------------------------|
+| **Loading States** | Uso de indicadores visuales o esqueletos de carga durante la sincronización de datos con la API. |
+| **Error Handling** | Captura de excepciones de red y errores de validación del backend (400, 401, 403, 404). |
+| **Token Expiration** | Detección automática de tokens expirados con redirección inmediata al módulo de Login. |
+| **Persistence** | Sincronización inmediata de la interfaz de usuario tras operaciones de escritura (CRUD) exitosas. |
 
 ---
-
-## Manejo de Estados y Errores
-
-La aplicación implementa un sistema de feedback proactivo para mejorar la experiencia de usuario:
-
-#### Loading States: Esqueletos o indicadores de carga durante la sincronización con la API.
-
-#### Error Handling: Captura de excepciones de red y errores de validación del backend (400, 401, 404).
-
-#### Token Expiration: Detección automática de tokens expirados con redirección inmediata al módulo de Login.
