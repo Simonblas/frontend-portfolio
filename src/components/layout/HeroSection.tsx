@@ -5,9 +5,19 @@ interface HeroProps {
   nombre?: string;
   titulo?: string;
   cvUrl?: string | null;
+  githubUrl?: string | null;
+  linkedinUrl?: string | null;
+  email?: string;
 }
 
-const HeroSection = ({ nombre, titulo, cvUrl }: HeroProps) => {
+const HeroSection = ({
+  nombre,
+  titulo,
+  cvUrl,
+  githubUrl,
+  linkedinUrl,
+  email,
+}: HeroProps) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -48,10 +58,10 @@ const HeroSection = ({ nombre, titulo, cvUrl }: HeroProps) => {
         {titulo || "Fullstack Developer"}
       </p>
 
-      <div className="mt-10 flex gap-4 ">
+      <div className="mt-10 flex gap-6 ">
         <button
           onClick={handleContactClick}
-          className="bg-blue-400 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-400/50 transition shadow-lg shadow-lg text-center"
+          className="bg-blue-400 text-white px-8 py-3 md:px-10 md:py-4 rounded-full font-bold hover:bg-blue-400/50 transition shadow-lg shadow-lg text-center"
         >
           Contact Me
         </button>
@@ -61,7 +71,7 @@ const HeroSection = ({ nombre, titulo, cvUrl }: HeroProps) => {
             href={cvUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 border-blue-400 px-10 py-4 rounded-full font-bold hover:bg-blue-400/30 transition text-center"
+            className="border-2 border-blue-400 px-8 py-3 md:px-10 md:py-4 rounded-full font-bold hover:bg-blue-400/30 transition text-center"
           >
             View CV
           </a>
@@ -74,7 +84,38 @@ const HeroSection = ({ nombre, titulo, cvUrl }: HeroProps) => {
           </button>
         )}
       </div>
-
+      <div className="mt-8 flex justify-between gap-10 mb-0">
+        {githubUrl && (
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-300 hover:text-blue-400 transition-colors font-medium flex items-center gap-2"
+          >
+            <span>GitHub</span>
+          </a>
+        )}
+        {linkedinUrl && (
+          <a
+            href={linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-300 hover:text-blue-400 transition-colors font-medium flex items-center gap-2"
+          >
+            <span>LinkedIn</span>
+          </a>
+        )}
+        {email && (
+          <a
+            href={`mailto:${email}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-300 hover:text-blue-400 transition-colors font-medium flex items-center gap-2"
+          >
+            <span>Email</span>
+          </a>
+        )}
+      </div>
       <div
         className={`transition-opacity duration-500 ${
           isVisible ? "opacity-100" : "opacity-0"

@@ -61,6 +61,9 @@ const Home = () => {
         nombre={profile?.nombre}
         titulo={profile?.titulo}
         cvUrl={profile?.curriculumPdfUrl}
+        githubUrl={profile?.githubUrl}
+        linkedinUrl={profile?.linkedinUrl}
+        email={profile?.emailContacto}
       />
 
       <AboutSection
