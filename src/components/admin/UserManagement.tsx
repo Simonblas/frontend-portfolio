@@ -27,15 +27,15 @@ const UserManagement = () => {
     setIsSaving(true);
     try {
       await adminService.updateProfile(profile);
-      alert("¡Perfil actualizado con éxito!");
+      alert("Profile successfully updated!");
     } catch (error) {
-      alert("Error al actualizar el perfil");
+      alert("Error updating profile!");
     } finally {
       setIsSaving(false);
     }
   };
 
-  if (loading) return <div className="text-white p-8 text-center animate-pulse">Cargando perfil...</div>;
+  if (loading) return <div className="text-white p-8 text-center animate-pulse">Loading profile...</div>;
 
   return (
     <div className="max-w-4xl mx-auto px-4">

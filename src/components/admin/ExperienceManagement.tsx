@@ -43,12 +43,12 @@ const ExperienceManagement = () => {
       setEditingExp(null);
       loadData();
     } catch (error) {
-      alert("Error al guardar la experiencia");
+      alert("Error saving the experience!");
     }
   };
 
   const handleDelete = async (id: number) => {
-    if (confirm("¿Estás seguro de eliminar esta experiencia?")) {
+    if (confirm("Are you sure you want to delete this experience?")) {
       await adminService.deleteExperience(id);
       loadData();
     }

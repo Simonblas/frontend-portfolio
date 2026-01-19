@@ -49,13 +49,13 @@ const ProjectManagement = () => {
       setShowModal(false);
       loadData(); // Recargamos para ver el proyecto con sus skills vinculadas
     } catch (error) {
-      console.error("Error en el proceso de guardado:", error);
-      alert("Hubo un problema al guardar el proyecto o sus habilidades.");
+      console.error("Error in the saving process:", error);
+      alert("There was a problem saving the project or your skills.");
     }
   };
 
   const handleDelete = async (id: number) => {
-    if (confirm("¿Eliminar este proyecto?")) {
+    if (confirm("Delete this project?")) {
       await adminService.deleteProject(id);
       loadData();
     }
