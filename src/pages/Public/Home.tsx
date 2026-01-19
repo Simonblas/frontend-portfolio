@@ -9,6 +9,7 @@ import ExperienceSection from "../../components/layout/ExperienceSection";
 import SkillSection from "../../components/layout/SkillSection";
 import EducationSection from "../../components/layout/EducationSection";
 import { useLocation } from "react-router-dom";
+import { ScrollReveal } from "../../reveal/ScrollReveal";
 
 const Home = () => {
   const location = useLocation();
@@ -65,18 +66,29 @@ const Home = () => {
         linkedinUrl={profile?.linkedinUrl}
         email={profile?.emailContacto}
       />
-
-      <AboutSection
-        fotoUrl={profile?.fotoUrl}
-        sobreMi={profile?.sobreMi}
-        githubUrl={profile?.githubUrl}
-        linkedinUrl={profile?.linkedinUrl}
-      />
-      <ExperienceSection />
-      <ProjectsSection />
-      <SkillSection />
-      <EducationSection />
-      <ContactSection email={profile?.emailContacto} />
+      <ScrollReveal>
+        <AboutSection
+          fotoUrl={profile?.fotoUrl}
+          sobreMi={profile?.sobreMi}
+          githubUrl={profile?.githubUrl}
+          linkedinUrl={profile?.linkedinUrl}
+        />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ExperienceSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ProjectsSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <SkillSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <EducationSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ContactSection email={profile?.emailContacto} />
+      </ScrollReveal>
     </>
   );
 };

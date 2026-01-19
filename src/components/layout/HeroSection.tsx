@@ -68,7 +68,7 @@ const HeroSection = ({
   return (
     <section
       id="hero"
-      className="min-h-[90vh] relative flex flex-col items-center justify-center text-center px-6 bg-transparent"
+      className="min-h-[90vh] relative flex flex-col items-center justify-center text-center px-6 bg-transparent animate-blink"
     >
       <h1
         className="text-5xl md:text-8xl font-extrabold text-white mb-4 tracking-tight"

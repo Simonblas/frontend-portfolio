@@ -22,7 +22,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6">
+    <div className="min-h-screen flex items-center justify-center px-6 animate-blink">
       <div className="w-full max-w-md mb-0 p-8 bg-transparent backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl">
         <h2 className="text-3xl font-bold text-white mb-2 text-center">
           Admin Access
