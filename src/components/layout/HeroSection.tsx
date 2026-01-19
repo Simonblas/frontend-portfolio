@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import Typed from "typed.js";
 
 interface HeroProps {
   nombre?: string;
@@ -46,15 +47,36 @@ const HeroSection = ({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [nombre || "Simon"],
+      typeSpeed: 70,
+      backSpeed: 40,
+      backDelay: 2000,
+      smartBackspace: true,
+      loop: true,
+      cursorChar: "",
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <section
       id="hero"
       className="min-h-[90vh] relative flex flex-col items-center justify-center text-center px-6 bg-transparent"
     >
-      <h1 className="text-5xl md:text-8xl font-extrabold text-white mb-4 tracking-tight">
-        Hi, I'm <span className="text-blue-400">{nombre || "Simon"}</span>
+      <h1
+        className="text-5xl md:text-8xl font-extrabold text-white mb-4 tracking-tight"
+        aria-label={`Hi, I'm ${nombre || "Simon"}`}
+      >
+        Hi, I'm <span ref={el} className="text-blue-400"></span>
       </h1>
-      <p className="text-xl md:text-2xl text-slate-400 max-w-2xl font-light">
+      <p className="text-lg md:text-2xl text-slate-400 max-w-2xl font-light">
         {titulo || "Fullstack Developer"}
       </p>
 
