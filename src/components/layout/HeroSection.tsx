@@ -61,7 +61,7 @@ const HeroSection = ({
       <div className="mt-10 flex gap-6 ">
         <button
           onClick={handleContactClick}
-          className="bg-blue-400 text-white px-8 py-3 md:px-10 md:py-4 rounded-full font-bold hover:bg-blue-400/50 transition shadow-lg shadow-lg text-center"
+          className="bg-blue-400 text-white px-8 py-3 md:px-10 md:py-4 rounded-full font-bold hover:bg-blue-400/50 transition shadow-lg text-center"
         >
           Contact Me
         </button>
