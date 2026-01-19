@@ -22,7 +22,7 @@ export const Dashboard = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-24 min-h-screen">
+    <div className="max-w-6xl mx-auto px-6 py-24 min-h-screen animate-blink">
       <header className="mb-10 text-center">
         <h1 className="text-4xl font-bold text-white mb-2">Control Panel</h1>
         <p className="text-slate-400">Manage your portfolio content and personal information</p>
