@@ -20,9 +20,9 @@ const ProjectsSection = () => {
       </div>
 
       {loading ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {[1, 2, 3].map((n) => (
-            <div key={n} className="h-64 bg-slate-800 animate-pulse rounded-xl"></div>
+            <div key={n} className="h-64 bg-slate-800 animate-pulse rounded-xl backdrop-blur-xs"></div>
           ))}
         </div>
       ) : (

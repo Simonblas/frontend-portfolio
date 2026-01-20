@@ -31,7 +31,7 @@ const ProjectCard = ({
   };
 
   return (
-    <div className="bg-blue-300/10 border border-white/10 rounded-2xl shadow-md overflow-hidden hover:shadow-2xl hover:border-blue-500/50 transition-all duration-500 flex flex-col group h-full">
+    <div className="bg-blue-300/10 border border-white/10 rounded-2xl shadow-md overflow-hidden hover:shadow-2xl hover:border-blue-500/50 transition-all duration-500 flex flex-col group h-full backdrop-blur-md">
       
       {/* IMAGEN DEL PROYECTO */}
       <div className="h-52 overflow-hidden bg-slate-800 relative">

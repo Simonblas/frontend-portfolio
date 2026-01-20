@@ -40,7 +40,7 @@ const AboutSection = ({
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <ScrollRevealXLeft>
           {/* Contenedor de Imagen */}
-          <div className="bg-transparent aspect-square rounded-2xl overflow-hidden shadow-xl border-2 border-blue-400">
+          <div className="bg-transparent aspect-square rounded-2xl overflow-hidden shadow-xl border-2 border-blue-400 backdrop-blur-xs">
             {fotoUrl ? (
               <img
                 src={getOptimizedImage(fotoUrl)}
@@ -57,8 +57,8 @@ const AboutSection = ({
         {/* Contenedor de Texto */}
         <ScrollRevealXRight>
           <div>
-            <h2 className="text-3xl font-bold mb-6 w-fit italic">About Me</h2>
-            <p className="text-lg text-slate-400 leading-relaxed max-w-3xl">
+            <h2 className="text-3xl font-bold mb-6 w-fit italic ">About Me</h2>
+            <p className="text-lg text-slate-400 leading-relaxed max-w-3xl backdrop-blur-md">
               {sobreMi || "Cargando descripción profesional..."}
             </p>
 

@@ -23,7 +23,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-6 animate-blink">
-      <div className="w-full max-w-md mb-0 p-8 bg-transparent backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl">
+      <div className="w-full max-w-md mb-0 p-8 bg-transparent border border-white/10 rounded-2xl shadow-2xl backdrop-blur-md">
         <h2 className="text-3xl font-bold text-white mb-2 text-center">Admin Access</h2>
         <p className="text-slate-400 text-center mb-8">Enter your credentials to access portfolio management</p>
 

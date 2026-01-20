@@ -70,5 +70,5 @@ export const PlexusBackground = () => {
 
   if (!init) return null;
 
-  return <Particles id="tsparticles" className="absolute h-screen inset-0 -z-10 pointer-events-none" options={options} />;
+  return <Particles id="tsparticles" className="fixed h-screen inset-0 -z-10 pointer-events-none" options={options} />;
 };

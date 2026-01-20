@@ -42,7 +42,7 @@ const ContactSection = ({ email }: ContactProps) => {
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={copyToClipboard}
-              className={`mt-8 px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest border transition-all duration-300 shadow-lg ${
+              className={`mt-8 px-6 py-2 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-widest border transition-all duration-300 shadow-lg ${
                 copied
                   ? "bg-emerald-500/20 border-emerald-500 text-emerald-400"
                   : "bg-white/5 border-white/20 text-slate-400 hover:text-blue-300 hover:border-blue-300/50"
