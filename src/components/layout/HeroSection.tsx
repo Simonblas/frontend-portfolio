@@ -68,7 +68,7 @@ const HeroSection = ({
   return (
     <section
       id="hero"
-      className="min-h-[90vh] relative flex flex-col items-center justify-center text-center px-6 bg-transparent animate-blink"
+      className="min-h-[90vh] mb-3 md:mb-0 relative flex flex-col items-center justify-center text-center px-6 bg-transparent animate-blink"
     >
       <h1
         className="text-5xl md:text-8xl font-extrabold text-white mb-4 tracking-tight"
@@ -145,7 +145,7 @@ const HeroSection = ({
       >
         <div className="absolute bottom-16 md:bottom-16 left-1/2 -translate-x-1/2">
           <svg
-            className="w-9 h-9 text-blue-400/60 animate-iteration-count-infinite animate-float"
+            className="w-11 h-11 text-blue-400/60 animate-iteration-count-infinite animate-float"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

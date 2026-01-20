@@ -41,7 +41,7 @@ export const PlexusBackground = () => {
           color: "#e2e8f0",
           distance: 140,
           enable: true,
-          opacity: 0.3,
+          opacity: 0.4,
           width: 1,
         },
         move: {
@@ -53,10 +53,10 @@ export const PlexusBackground = () => {
         },
         number: {
           density: { enable: true, area: 800 },
-          value: 90,
+          value: 100,
         },
         opacity: {
-          value: { min: 0.1, max: 0.5 },
+          value: { min: 0.3, max: 0.8 },
         },
         shape: { type: "circle" },
         size: {
@@ -70,11 +70,5 @@ export const PlexusBackground = () => {
 
   if (!init) return null;
 
-  return (
-    <Particles
-      id="tsparticles"
-      className="absolute h-screen inset-0 -z-10 pointer-events-none"
-      options={options}
-    />
-  );
+  return <Particles id="tsparticles" className="absolute h-screen inset-0 -z-10 pointer-events-none" options={options} />;
 };

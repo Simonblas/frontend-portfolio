@@ -9,7 +9,6 @@ import ExperienceSection from "../../components/layout/ExperienceSection";
 import SkillSection from "../../components/layout/SkillSection";
 import EducationSection from "../../components/layout/EducationSection";
 import { useLocation } from "react-router-dom";
-import { ScrollReveal } from "../../reveal/ScrollReveal";
 
 const Home = () => {
   const location = useLocation();
@@ -35,11 +34,7 @@ const Home = () => {
     }
   }, [location]);
 
-  const {
-    data: profile,
-    loading,
-    request: fetchProfile,
-  } = useApi(portfolioService.getProfile);
+  const { data: profile, loading, request: fetchProfile } = useApi(portfolioService.getProfile);
 
   useEffect(() => {
     fetchProfile();
@@ -49,10 +44,7 @@ const Home = () => {
     return (
       <div className="flex flex-col h-screen items-center justify-center bg-transparent text-blue-300 font-bold text-center p-3">
         <p className="text-xl mb-2">Loading server...</p>
-        <p className="max-w-md font-normal text-blue-300/70">
-          The backend may take a few seconds to start due to the use of free
-          infrastructure.
-        </p>
+        <p className="max-w-md font-normal text-blue-300/70">The backend may take a few seconds to start due to the use of free infrastructure.</p>
       </div>
     );
 
@@ -66,29 +58,12 @@ const Home = () => {
         linkedinUrl={profile?.linkedinUrl}
         email={profile?.emailContacto}
       />
-      <ScrollReveal>
-        <AboutSection
-          fotoUrl={profile?.fotoUrl}
-          sobreMi={profile?.sobreMi}
-          githubUrl={profile?.githubUrl}
-          linkedinUrl={profile?.linkedinUrl}
-        />
-      </ScrollReveal>
-      <ScrollReveal>
-        <ExperienceSection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <ProjectsSection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <SkillSection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <EducationSection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <ContactSection email={profile?.emailContacto} />
-      </ScrollReveal>
+      <AboutSection fotoUrl={profile?.fotoUrl} sobreMi={profile?.sobreMi} githubUrl={profile?.githubUrl} linkedinUrl={profile?.linkedinUrl} />
+      <ExperienceSection />
+      <ProjectsSection />
+      <SkillSection />
+      <EducationSection />
+      <ContactSection email={profile?.emailContacto} />
     </>
   );
 };
