@@ -31,7 +31,7 @@ const ProjectCard = ({
   };
 
   return (
-    <div className="bg-blue-300/10 border border-white/10 rounded-2xl shadow-md overflow-hidden hover:shadow-2xl hover:border-blue-500/50 transition-all duration-500 flex flex-col group h-full backdrop-blur-md">
+    <div className="bg-blue-200/5 border border-white/10 rounded-2xl shadow-md overflow-hidden hover:shadow-2xl hover:border-blue-500/50 transition-all duration-500 flex flex-col group h-full backdrop-blur-md">
       
       {/* IMAGEN DEL PROYECTO */}
       <div className="h-52 overflow-hidden bg-slate-800 relative">
@@ -108,7 +108,7 @@ const ProjectCard = ({
               href={urlDemo}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-bold bg-blue-500 text-white px-5 py-2 rounded-xl hover:bg-blue-600 transition-all shadow-lg shadow-blue-600/20 active:scale-95"
+              className="text-sm font-bold bg-blue-500 text-white px-5 py-2 rounded-xl hover:bg-blue-600 transition-all shadow-md shadow-blue-600/20 active:scale-95"
             >
               Live Demo
             </a>

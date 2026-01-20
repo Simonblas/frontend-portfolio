@@ -39,7 +39,7 @@ const SkillSection = () => {
           {Object.entries(groupedSkills).map(([category, categorySkills], index) => (
             <ScrollRevealY key={category} delay={index * 0.15}>
               <div
-                className="h-full bg-gray-100/10 border border-slate-800/60 p-8 rounded-3xl backdrop-blur-md hover:border-blue-400/20 transition-colors"
+                className="h-full bg-blue-200/5 border border-slate-800/60 p-8 rounded-3xl backdrop-blur-md hover:border-blue-400/20 transition-colors"
               >
                 {/* Título de la Categoría */}
                 <h3 className="text-sky-400 text-base font-black uppercase tracking-[0.3em] mb-8 border-l-4 border-sky-400 pl-4">{category}</h3>

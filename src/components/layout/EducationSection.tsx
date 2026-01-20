@@ -35,7 +35,7 @@ const EducationSection = () => {
           ? [1, 2].map((n) => <div key={n} className="h-32 bg-slate-800/50 animate-pulse rounded-xl border-l-4 border-slate-700 backdrop-blur-md" />)
           : sortedEducation.map((edu: Education, index: number) => (
               <ScrollRevealY key={edu.id} delay={index * 0.15}>
-                <div className="group p-4 md:p-6 bg-gray-100/10 border-l-4 border-blue-400 rounded-r-xl hover:bg-blue-200/5 transition-all duration-300 flex flex-row gap-3 md:gap-6 items-center overflow-hidden backdrop-blur-md">
+                <div className="group p-4 md:p-6 bg-blue-200/5 border-l-4 border-blue-400 rounded-r-xl hover:bg-blue-200/5 transition-all duration-300 flex flex-row gap-3 md:gap-6 items-center overflow-hidden backdrop-blur-md">
                   <div className="shrink-0">
                     <div className="w-12 h-12 md:w-20 md:h-20 rounded-md md:rounded-lg bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden p-1.5 md:p-2 group-hover:border-blue-400/50 transition-colors">
                       {edu.logoUrl ? (
