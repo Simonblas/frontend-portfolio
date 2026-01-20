@@ -25,12 +25,9 @@ const Footer = () => {
         {/* Logo o Nombre - Alineación a la izquierda en mobile */}
         <div className="flex flex-col items-start sm:justify-start sm:flex-1">
           <span className="text-sm md:text-xl font-light text-gray-400">
-            Developed by{" "}
-            {profile ? `${profile.nombre} ${profile.apellido}` : "Simon Blas"}
+            Developed by {profile ? `${profile.nombre} ${profile.apellido}` : "Simon Blas"}
           </span>
-          <p className="text-[11px] md:text-sm text-gray-500 mt-1">
-            {profile?.titulo || "Fullstack Developer"}
-          </p>
+          <p className="text-[11px] md:text-sm text-gray-500 mt-1">{profile?.titulo || "Fullstack Developer"}</p>
         </div>
 
         {/* Copyright - Oculto en mobile para ahorrar espacio, visible en tablets/desktop */}
