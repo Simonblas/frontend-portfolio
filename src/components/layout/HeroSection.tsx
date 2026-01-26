@@ -63,7 +63,7 @@ const HeroSection = ({ nombre, titulo, cvUrl, githubUrl, linkedinUrl, email }: H
       id="hero"
       className="min-h-[90vh] mb-3 md:mb-0 relative flex flex-col items-center justify-center text-center px-6 bg-transparent animate-blink"
     >
-      <h1 className="text-5xl md:text-8xl font-extrabold text-white mb-4 tracking-tight" aria-label={`Hi, I'm ${nombre || "Simon"}`}>
+      <h1 className="text-5xl md:text-8xl font-extrabold text-white mb-4 tracking-tight" translate="no" aria-label={`Hi, I'm ${nombre || "Simon"}`}>
         Hi, I'm <span ref={el} className="text-blue-400"></span>
       </h1>
       <p className="text-lg md:text-2xl text-slate-400 max-w-2xl font-light">{titulo || "Fullstack Developer"}</p>
