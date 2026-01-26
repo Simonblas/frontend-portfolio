@@ -33,60 +33,34 @@ export const Navbar = () => {
     <>
       {/* --- DISEÑO ESCRITORIO --- */}
       <nav className="hidden md:flex fixed top-0 w-full h-16 z-50 px-12 items-center justify-between backdrop-blur-3xl animate-blink">
-        <Link
-          to="/"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="hover:text-white/55 transition"
-        >
+        <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:text-white/55 transition">
           <p className="font-sans text-[20px]/5">Simon Blas</p>
           <p className="font-light text-[14px]">Software Developer</p>
         </Link>
 
         <div className="flex gap-8 items-center font-medium text-gray-200">
-          <button
-            onClick={() => handleNavClick("about")}
-            className="hover:text-white/55 transition"
-          >
+          <button onClick={() => handleNavClick("about")} className="hover:text-white/55 transition cursor-pointer">
             About
           </button>
 
-          <button
-            onClick={() => handleNavClick("experience")}
-            className="hover:text-white/55 transition"
-          >
+          <button onClick={() => handleNavClick("experience")} className="hover:text-white/55 transition cursor-pointer">
             Experience
           </button>
 
-          <button
-            onClick={() => handleNavClick("projects")}
-            className="hover:text-white/55 transition"
-          >
+          <button onClick={() => handleNavClick("projects")} className="hover:text-white/55 transition cursor-pointer">
             Projects
           </button>
-          <button
-            onClick={() => handleNavClick("skills")}
-            className="hover:text-white/55 transition"
-          >
+          <button onClick={() => handleNavClick("skills")} className="hover:text-white/55 transition cursor-pointer">
             Skills
           </button>
-          <button
-            onClick={() => handleNavClick("education")}
-            className="hover:text-white/55 transition"
-          >
+          <button onClick={() => handleNavClick("education")} className="hover:text-white/55 transition cursor-pointer">
             Education
           </button>
-          <button
-            onClick={() => handleNavClick("contact")}
-            className="hover:text-white/55 transition"
-          >
+          <button onClick={() => handleNavClick("contact")} className="hover:text-white/55 transition cursor-pointer">
             Contact
           </button>
           {!isAuthenticated ? (
-            <Link
-              to="/login"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="hover:text-white/55 transition"
-            >
+            <Link to="/login" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:text-white/55 transition">
               Login
             </Link>
           ) : (
@@ -116,37 +90,25 @@ export const Navbar = () => {
 
       {/* --- DISEÑO MOBILE --- */}
       <nav className="md:hidden fixed bottom-0 w-full h-16 z-50 flex items-center justify-around px-2 text-gray-100 bg-black/50 backdrop-blur-3xl border-t border-slate-500/30 animate-blink">
-        <button
-          onClick={() => handleNavClick("hero")}
-          className="flex flex-col items-center text-xs"
-        >
+        <button onClick={() => handleNavClick("hero")} className="flex flex-col items-center text-xs">
           <span className="text-xl">
             <img className="w-6" src={homeImg} alt="Home" />
           </span>
           <span>Home</span>
         </button>
-        <button
-          onClick={() => handleNavClick("experience")}
-          className="flex flex-col items-center text-xs"
-        >
+        <button onClick={() => handleNavClick("experience")} className="flex flex-col items-center text-xs">
           <span className="text-xl">
             <img src={experienceImg} alt="experience" className="w-6" />
           </span>
           <span>Experience</span>
         </button>
-        <button
-          onClick={() => handleNavClick("projects")}
-          className="flex flex-col items-center text-xs"
-        >
+        <button onClick={() => handleNavClick("projects")} className="flex flex-col items-center text-xs">
           <span className="text-xl">
             <img src={projectImg} alt="project" className="w-6" />
           </span>
           <span>Projects</span>
         </button>
-        <button
-          onClick={() => handleNavClick("contact")}
-          className="flex flex-col items-center text-xs"
-        >
+        <button onClick={() => handleNavClick("contact")} className="flex flex-col items-center text-xs">
           <span className="text-xl">
             <img src={contactImg} alt="contact" className="w-6" />
           </span>
@@ -164,19 +126,12 @@ export const Navbar = () => {
           className="flex flex-col items-center text-xs"
         >
           <span className="text-xl">
-            <img
-              src={isAuthenticated ? adminImg : loginImg}
-              alt="login"
-              className="w-6"
-            />
+            <img src={isAuthenticated ? adminImg : loginImg} alt="login" className="w-6" />
           </span>
           <span>{isAuthenticated ? "Admin" : "Login"}</span>
         </Link>
         {isAuthenticated && (
-          <button
-            onClick={handleLogout}
-            className="flex flex-col items-center text-xs"
-          >
+          <button onClick={handleLogout} className="flex flex-col items-center text-xs">
             <span className="text-xl">
               <img src={loginImg} alt="login" className="w-6" />
             </span>
